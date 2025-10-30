@@ -13,11 +13,11 @@ public:
         int sign = s[0] == '+' || s[0] == '-';
         string res = "";
         for (int i = 0; i < s.size(); i++){
-            if (sign){
-                res += s[i];
-                sign = 0;
-                continue;
-            }
+            // if (sign){
+            //     res += s[i];
+            //     sign = 0;
+            //     continue;
+            // }
             // if (s[i] == ' ') continue;
             if (isdigit(s[i]) || (s[i] == '-' || s[i] == '+')) res += s[i];
             if (!isdigit(s[i + 1])){
