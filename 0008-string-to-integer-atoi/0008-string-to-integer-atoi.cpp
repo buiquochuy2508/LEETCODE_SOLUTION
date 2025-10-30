@@ -9,8 +9,8 @@ public:
         }
         if (s[0] != '+' && s[0] != '-' && !isdigit(s[0])) return 0;
         if ((s[0] == '+' || s[0] == '-') && !isdigit(s[1])) return 0;
-        if (s[0] == '.') return 0;
-        int sign = s[0] == '+' || s[0] == '-';
+        // if (s[0] == '.') return 0;
+        // int sign = s[0] == '+' || s[0] == '-';
         string res = "";
         for (int i = 0; i < s.size(); i++){
             // if (sign){
@@ -26,16 +26,16 @@ public:
             }
         }
         int k = 1;
-        cout << res;
+        // cout << res;
         // if (res.size() > 18) return 0;
         long long ans = 0;
         // cout << res;
         for (int i = 0; i < res.size(); ++i){
             if (isdigit(res[i])) ans = ans * 10 + (res[i] - '0');
-            if (ans > INT_MAX) break;
             else{
                 if (res[i] == '-') k *= -1;
             }
+            if (ans > INT_MAX) break;
         }
         ans *= k;
         if (ans > INT_MAX) ans = INT_MAX;
